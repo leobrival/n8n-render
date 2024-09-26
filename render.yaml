@@ -1,5 +1,5 @@
 services:
-  -  name: n8n
+  - name: n8n
     type: web
     env: docker
     region: frankfurt # This region is optional and defaults to oregon
