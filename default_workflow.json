@@ -1,0 +1,75 @@
+{
+  "name": "Render instance activation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "id": "5412965c-91d5-40e5-8290-4ffbbb0fa294",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [620, 460]
+    },
+    {
+      "parameters": {
+        "url": "https://WEBHOOK_URL/healthz",
+        "options": {}
+      },
+      "id": "2b84a5ab-8c15-4349-b34c-704a802af5b6",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [840, 460]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "none",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "2b6ab11a-fac5-4dac-9e78-be7111ffbad1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a59c097042b2e09a3a5fd262d0d3bacfddf873628c8e27f6ccea09c9fec3e168"
+  },
+  "id": "LehziT5vvTMTpD0n",
+  "tags": [
+    {
+      "createdAt": "2024-09-26T21:19:56.904Z",
+      "updatedAt": "2024-09-26T21:19:56.904Z",
+      "id": "oQoerVIz2J2vLEkG",
+      "name": "N8N"
+    },
+    {
+      "createdAt": "2024-09-26T21:19:52.997Z",
+      "updatedAt": "2024-09-26T21:19:52.997Z",
+      "id": "P0S7h4T7L9vJ8LiJ",
+      "name": "Render"
+    }
+  ]
+}
