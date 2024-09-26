@@ -2,34 +2,24 @@ services:
   - type: web
     name: n8n
     env: docker
-    region: frankfurt # optional (defaults to oregon)
-    plan: free # optional (defaults to starter)
-    branch: main # optional (defaults to master)
+    region: frankfurt # This region is optional and defaults to oregon
+    plan: free # This plan is optional and defaults to starter
+    branch: main # This branch is optional and defaults to master
     numInstances: 1
     healthCheckPath: /healthz
     envVars:
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
-        fromDatabase:
-          name: n8nDB
-          property: host
+        value: ${DB_POSTGRESDB_HOST}
       - key: DB_POSTGRESDB_DATABASE
-        fromDatabase:
-          name: n8nDB
-          property: database
+        value: ${DB_POSTGRESDB_DATABASE}
       - key: DB_POSTGRESDB_PORT
-        fromDatabase:
-          name: n8nDB
-          property: port
+        value: ${DB_POSTGRESDB_PORT}
       - key: DB_POSTGRESDB_USER
-        fromDatabase:
-          name: n8nDB
-          property: user
+        value: ${DB_POSTGRESDB_USER}
       - key: DB_POSTGRESDB_PASSWORD
-        fromDatabase:
-          name: n8nDB
-          property: password
+        value: ${DB_POSTGRESDB_PASSWORD}
       - key: PORT
         value: 5678
       - key: N8N_LOG_LEVEL
@@ -42,8 +32,7 @@ services:
         value: fr
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
-
-databases:
-  - name: n8nDB
-    region: frankfurt # optional (defaults to oregon)
-    plan: free
+      - key: EXECUTIONS_PROCES
+        value: main
+      - key: WEBHOOK_URL
+        value: ${WEBHOOK_URL}
