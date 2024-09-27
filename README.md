@@ -2,6 +2,8 @@
 
 Quick guide to set up n8n on Render.com using Supabase as the PostgreSQL database.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
 ## Prerequisites
 
 - Accounts on [Render.com](https://render.com) & [Supabase](https://supabase.com)
@@ -22,7 +24,9 @@ Quick guide to set up n8n on Render.com using Supabase as the PostgreSQL databas
 ### 2. Deploy n8n on Render
 
 1. Deploy n8n on Render using the button below:
+   <br/>
    [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+   <br/>
 2. On **Create a New Web Service**:
    - Name your service.
    - Select **Docker** as the environment.
