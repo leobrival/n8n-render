@@ -2,8 +2,6 @@
 
 Quick guide to set up n8n on Render.com using Supabase as the PostgreSQL database.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
 ## Prerequisites
 
 - Accounts on [Render.com](https://render.com) & [Supabase](https://supabase.com)
